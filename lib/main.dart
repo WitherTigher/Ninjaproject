@@ -2,7 +2,25 @@ import 'package:flutter/material.dart';
 import 'quote.dart';
 import 'quote_card.dart';
 
-void main() => runApp(MaterialApp(home: QuoteList()));
+void main() => runApp(MaterialApp(
+    theme: ThemeData(
+      colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.cyan, backgroundColor: Colors.grey[200]),
+      appBarTheme: AppBarTheme(
+        backgroundColor: Colors.cyan,
+        foregroundColor: Colors.white,
+      ),
+      textTheme: TextTheme(
+        titleLarge: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.normal,
+            color: Colors.white),
+        bodyMedium: TextStyle(
+            fontSize: 18, fontStyle: FontStyle.normal, color: Colors.black),
+      ),
+    ),
+    home: QuoteList()));
 
 class QuoteList extends StatefulWidget {
   @override
@@ -48,11 +66,11 @@ class _QuoteListState extends State<QuoteList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      //backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: Text('Awesome Quotes'),
         centerTitle: true,
-        backgroundColor: Colors.redAccent,
+        //backgroundColor: Colors.redAccent,
       ),
       body: Column(
         children: quotes

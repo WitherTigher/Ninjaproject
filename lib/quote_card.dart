@@ -33,11 +33,12 @@ class _QuoteCardState extends State<QuoteCard> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(widget.quote.text, style: const TextStyle(fontSize: 18)),
+            Text(widget.quote.text,
+                style: Theme.of(context).textTheme.bodyMedium),
             SizedBox(height: 6),
             Text(
               '- ${widget.quote.author}',
-              style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
+              style: Theme.of(context).textTheme.bodyMedium,
             ),
             SizedBox(height: 6),
             Wrap(
