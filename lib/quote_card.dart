@@ -44,11 +44,15 @@ class _QuoteCardState extends State<QuoteCard> {
             Wrap(
               spacing: 8,
               children: [
-                Chip(label: Text(widget.quote.category)),
+                Chip(
+                    label: Text(
+                  widget.quote.category,
+                  style: Theme.of(context).textTheme.bodySmall,
+                )),
                 Chip(
                   label: Text(
                     DateFormat('MMM d, yyyy').format(widget.quote.createdAt),
-                    style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
+                    style: Theme.of(context).textTheme.bodySmall,
                   ),
                 ),
               ],

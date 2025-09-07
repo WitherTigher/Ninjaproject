@@ -11,14 +11,15 @@ void main() => runApp(MaterialApp(
         foregroundColor: Colors.white,
       ),
       textTheme: TextTheme(
-        titleLarge: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.normal,
-            color: Colors.white),
-        bodyMedium: TextStyle(
-            fontSize: 18, fontStyle: FontStyle.normal, color: Colors.black),
-      ),
+          titleLarge: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.normal,
+              color: Colors.white),
+          bodyMedium: TextStyle(
+              fontSize: 18, fontStyle: FontStyle.normal, color: Colors.black),
+          bodySmall:
+              TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
     ),
     home: QuoteList()));
 
